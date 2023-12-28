@@ -1,0 +1,40 @@
+@import 'vars';
+@import 'mixins';
+
+
+.container {
+    &__span {
+        color: $siteColor;
+    }
+}
+
+%inheritance {
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+.nav {
+    display: flex;
+    gap: $gap;
+    @extend %inheritance;
+
+    ßß &__link {
+        text-decoration: none;
+    }
+}
+
+
+
+.content {
+    display: flex;
+    gap: $gap;
+    @include centerflex();
+
+    &__item {
+        // width: $siteWidth / 4;
+        width: 25%;
+        height: 200px;
+        border: $border;
+    }
+
+}

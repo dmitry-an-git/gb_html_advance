@@ -1,0 +1,21 @@
+.title {
+  color: red;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.top_head__heading {
+  color: #f16d7f;
+}
+
+.breadcrumbs__link {
+  font-weight: 300;
+}
+
+.breadcrumbs__link_site {
+  font-weight: 700;
+  color: #f16d7f;
+}/*# sourceMappingURL=style.css.map */
