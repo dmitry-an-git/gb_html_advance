@@ -1,0 +1,46 @@
+.categories {
+    padding-top: 98px;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 560px);
+    gap: 20px;
+
+    .item {
+        border: none;
+        min-height: 261px;
+        position: relative;
+
+        img {
+            position: absolute;
+            z-index: -1;
+        }
+
+        &__text_container {
+            text-transform: capitalize;
+            margin-top: 26px;
+            position: absolute;
+            z-index: 1;
+            padding: 16px 20px 16px 20px;
+            background-color: #fff;
+            @include font-style($size: 18px, $line-height: 1.2, $weight: 900);
+            text-transform: uppercase;
+            color: #222222;
+
+            .pink {
+                font-size: 30px;
+                color: $siteColor;
+            }
+        }
+    }
+
+    .item1 {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        height: 542px;
+    }
+
+    .item4 {
+        grid-column: 2/3;
+        grid-row: 2/4;
+    }
+}

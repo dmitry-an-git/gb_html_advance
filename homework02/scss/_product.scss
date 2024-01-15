@@ -1,0 +1,179 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__img_container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 777px;
+        background-color: #f7f7f7;
+        border: 1px solid #eaeaea;
+        padding-top: 11px;
+        padding-bottom: 42px;
+    }
+
+    &__img {
+        width: 597px;
+        height: 724px;
+    }
+
+    &__info_container {
+        width: $siteWidth;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+        margin-top: -100px;
+        z-index: 100;
+        // padding-left: 250px;
+        // padding-right: 250px;
+
+        &__section {
+            @include font-style($size: 14px, $line-height: 24px, $weight: 700);
+            text-transform: uppercase;
+            color: $siteColor;
+            border-bottom: 1px solid #eaeaea;
+            padding-top: 73px;
+            padding-bottom: 14px;
+        }
+
+        &__title {
+            @include font-style($size: 18px, $line-height: 24px, $weight: 900);
+            text-transform: uppercase;
+            color: #4d4d4d;
+            padding-top: 17px;
+            padding-bottom: 24px;
+        }
+
+        &__stars {
+
+            padding-bottom: 26px;
+        }
+
+        &__desc {
+            width: 1140px - 260px - 260px;
+            @include font-style($size: 14px, $line-height: 24px, $weight: 300);
+            color: #5e5e5e;
+            padding-bottom: 24px;
+            text-align: center;
+        }
+
+        &__material_designer {
+            display: flex;
+            justify-content: center;
+            gap: 44px;
+
+            .msg {
+                @include font-style($size: 14px, $line-height: 24px, $weight: 700);
+                color: #b9b9b9;
+                text-transform: uppercase;
+                padding-bottom: 37px;
+
+                .black {
+                    color: #2f2f2f;
+                }
+            }
+        }
+
+        &__price {
+            @include font-style($size: 24px, $line-height: 24px, $weight: 700);
+            color: $siteColor;
+            width: 642px;
+            border-bottom: 1px solid #eaeaea;
+            text-align: center;
+            padding-bottom: 43px;
+            margin-bottom: 63px;
+        }
+
+        &__order {
+            width: 537px;
+
+            .parameters {
+                display: flex;
+                justify-content: space-between;
+
+                &__parameter {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .title {
+                        @include font-style($size: 14px, $weight: 700);
+                        color: #2f2f2f;
+                        text-transform: uppercase;
+                        padding-bottom: 16px;
+                    }
+
+                    .select_box {
+                        @include font-style($size: 13px, $line-height: 12px, $weight: 400);
+                        color: #bcbcbc;
+                        width: 120px;
+                        height: 12px;
+                        background-color: #fff;
+                        padding: 12px;
+                        border: 1px solid #eaeaea;
+                        border-radius: 0;
+                        margin-bottom: 28px;
+
+                        .color-text {
+                            display: flex;
+                            gap: 12px;
+
+                            .color {
+                                height: 12px;
+                                width: 12px;
+                                background-color: $siteColor;
+
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            button {
+                width: 100%;
+                border: 1px solid $siteColor;
+                background-color: transparent;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                padding-left: 12px;
+                padding-right: 12px;
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                align-items: center;
+                cursor: pointer;
+                margin-bottom: 122px;
+
+                path {
+                    fill: $siteColor;
+                }
+
+                &:hover {
+                    background-color: $siteColor;
+                    transition: 0.2s;
+
+                    path {
+                        fill: #FFF;
+                    }
+
+                    p {
+                        color: #FFF;
+                    }
+
+                }
+
+                p {
+                    @include font-style($size: 16px, $line-height: 1.2, $weight: 700);
+                    color: $siteColor;
+                    text-wrap: nowrap;
+                }
+            }
+        }
+    }
+}

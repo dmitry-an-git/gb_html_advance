@@ -1,0 +1,43 @@
+.footer {
+    background-color: #e6e6e6;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left {
+        @include font-style($size: 16px, $weight: 400);
+        color: #7a7a7a;
+    }
+
+    &__right {
+        display: flex;
+        gap: 8px;
+
+        &__social_logo {
+            height: 32px;
+            width: 32px;
+            background-color: #FFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg path {
+                fill: #b2b2b2;
+            }
+
+            &:hover {
+                background-color: $siteColor;
+
+                svg path {
+                    fill: white;
+                }
+            }
+
+            &:active {
+                opacity: 0.29;
+            }
+        }
+    }
+}

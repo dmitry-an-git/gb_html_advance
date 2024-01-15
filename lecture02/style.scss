@@ -1,0 +1,229 @@
+@import 'vars';
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Lato';
+}
+
+a {
+    text-decoration: none;
+}
+
+summary {
+    display: block;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.center {
+    padding-left: calc(50% - $siteWidth / 2);
+    padding-right: calc(50% - $siteWidth / 2);
+}
+
+.box-content {
+    overflow: hidden;
+    // you need it to avoid horizontal scroll when burger menu slides to the right beyond visibility area
+}
+
+.header {
+
+    background-color: #6F6E6E;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+    &__right {
+        path {
+            fill: white;
+        }
+
+        &:hover {
+            path {
+                fill: $siteColor;
+            }
+        }
+    }
+}
+
+#burger {
+    position: absolute;
+    left: -999999px;
+    visibility: hidden;
+
+    &:checked~.nav {
+        // display: none;
+        right: -$widthMenuBurger;
+    }
+}
+
+.nav {
+    background: #FFFFFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    width: $widthMenuBurger;
+    padding: 32px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 75px;
+    right: 0px;
+    z-index: 11;
+    transition: right .3s;
+
+}
+
+.filter-sort {
+    background-color: beige;
+    padding-top: 39px;
+    display: flex;
+    gap: 30px;
+    position: relative;
+    height: 132px;
+}
+
+.filter {
+    // padding: 13px 16px 16px;
+    padding-top: 13px;
+    padding-left: 16px;
+    width: 360px;
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
+
+    &__content {
+        // position: absolute;
+    }
+
+    &[open] {
+        padding: 13px 16px 16px;
+        background: white;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        position: absolute;
+    }
+
+    &[open] .filter__heading {
+        color: $siteColor;
+    }
+
+    // &[open] .filter__content {
+    //     padding: 13px 16px 16px;
+    //     background: white;
+    //     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    // }
+
+    &[open] path {
+        fill: $siteColor;
+    }
+
+    &__heading {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: $colorText;
+    }
+
+    &__summary {
+        display: flex;
+        box-sizing: border-box;
+        gap: 11px;
+        align-items: center;
+    }
+
+    &__item {
+        margin-top: 16px;
+    }
+
+    &__heading-list {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6F6E6E;
+        padding: 8px 11px 11px 11px;
+        border-bottom: 1px solid #EBEBEB;
+        border-left: 5px solid $siteColor;
+    }
+
+    &__item[open] .filter__heading-list {
+        color: $siteColor;
+    }
+
+    &__link-box {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        padding: 24px 16px;
+    }
+
+    &__link {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6F6E6E;
+
+        &:hover {
+            color: $siteColor;
+        }
+    }
+}
+
+.sort {
+    display: flex;
+    gap: 18px;
+    // position: relative;
+    left: 490px;
+    top: 51px;
+    padding-top: 13px;
+
+    &__details {
+        position: relative;
+    }
+
+    &__summary {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__heading {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6F6E6E;
+    }
+
+    &__box {
+        background-color: white;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        position: absolute;
+        padding: 7px 30px 11px 9px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        left: -9px;
+        top: 22px;
+    }
+
+    &__check {
+        display: flex;
+        gap: 9px;
+        align-items: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #6F6E6E;
+    }
+}
