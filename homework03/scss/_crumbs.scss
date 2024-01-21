@@ -1,0 +1,41 @@
+.bread_crumbs {
+
+    display: table;
+    width: $siteWidth;
+    height: 148px;
+    background-color: #f8f3f4;
+
+
+    &__left {
+        display: table-cell;
+        @include font-style($size: 24px, $line-height: 20px, $weight: 900);
+        color: $siteColor;
+        text-transform: uppercase;
+
+        vertical-align: middle;
+    }
+
+    &__right {
+        display: table-cell;
+        @include font-style($size: 14px, $line-height: 20px, $weight: 300);
+        color: black;
+        text-transform: uppercase;
+
+        vertical-align: middle;
+        text-align: right;
+
+        .current {
+            font-weight: 700;
+            color: $siteColor;
+        }
+    }
+}
+
+@supports (display:flex) {
+    .bread_crumbs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+}

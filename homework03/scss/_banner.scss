@@ -1,0 +1,31 @@
+.banner {
+    height: 665px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    // gap: 327px;
+    background-image: url(img/dude.jpg);
+    background-size: cover;
+    z-index: -2;
+    margin-top: -51px;
+
+    &__motto {
+        border-left: 12pt solid $siteColor;
+        padding-left: 12pt;
+        float: left;
+
+        h1 {
+            @include font-style($size: 60px, $line-height: 1.2, $weight: 900);
+            color: #222;
+        }
+
+        h2 {
+            @include font-style($size: 40px, $line-height: 1.2, $weight: 900);
+            color: #222;
+        }
+
+        .pink {
+            color: $siteColor;
+        }
+    }
+}
