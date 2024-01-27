@@ -1,35 +1,38 @@
 .navigation {
     display: flex;
     justify-content: center;
-    // gap: 50px;
     background-color: #ffffff;
-
-    .selected {
-        border-bottom: 3px solid $siteColor;
-    }
 
     .menu {
         display: flex;
         justify-content: center;
-        gap: 40px;
+
+        gap: 34px;
         list-style: none;
 
-        &-list {
+        &__li {
             position: relative;
-            width: $width;
-            padding-top: 19px;
-            padding-bottom: 19px;
-            padding-left: 5px;
-            padding-right: 5px;
+            // width: $width;
+            height: 48px;
+            // padding-top: 19px;
+            // padding-bottom: 19px;
+            padding-left: 8px;
+            padding-right: 8px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
 
-            &:hover .menu-box {
+            &:hover .menu__box {
                 display: flex;
             }
-
-
         }
 
-        &-link {
+        &__selected {
+            border-bottom: 3px solid $siteColor;
+            box-sizing: border-box;
+        }
+
+        &__link {
             @include font-style($size: 14px, $weight: 700);
             text-transform: uppercase;
             color: #222222;
@@ -39,9 +42,7 @@
             }
         }
 
-
-
-        &-box {
+        &__box {
             background-color: #FFF;
             border-radius: 5px;
             padding: 20px;
@@ -51,7 +52,6 @@
             display: none;
             gap: 32px;
 
-
             &::before {
                 content: "";
                 display: block;
@@ -60,32 +60,27 @@
                 position: absolute;
                 background-color: #FFF;
                 top: -9px;
-                // left: 30px;
                 left: $width/2;
                 right: auto;
                 transform: rotate(45deg);
                 border-top: #e8e8e8 solid 1px;
                 border-left: #e8e8e8 solid 1px;
             }
-
         }
 
-        &-item {}
-
-        &-title {
+        &__title {
             border-bottom: #e8e8e8 solid 1px;
             @include font-style($size: 14px, $weight: 400);
-            text-transform: uppercase;
             color: #232323;
+            text-transform: uppercase;
             padding-bottom: 8px;
             width: 235px;
             margin-bottom: 16px;
         }
 
-        &-item-link {
+        &__itemlink {
             @include font-style($size: 14px, $line-height: 28px, $weight: 400);
             color: #646464;
-            text-decoration: none;
             display: block;
 
             &:hover {
@@ -100,13 +95,14 @@
 
 .last:hover {
 
-    .menu-box {
+    .menu__box {
         right: 0;
         left: auto;
     }
 
-    .menu-box::before {
+    .menu__box::before {
         right: 50px;
         left: auto;
     }
+
 }

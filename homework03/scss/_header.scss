@@ -1,41 +1,41 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    &__img {
+        width: 59px;
+        height: 51px;
+    }
+
+    &__txt {
+        margin-top: 4px;
+        @include font-style($size: 27px, $weight: 300);
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+        color: #222222;
+
+        &_p {
+            font-weight: 900;
+            color: $siteColor;
+        }
+    }
+}
+
 .header {
     padding-top: 25px;
     padding-bottom: 24px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     border-bottom: 1px solid #ececec;
+    background-color: #ffffff;
 
     &__left {
         padding-left: 1px;
         display: flex;
-        gap: 13px;
         justify-content: flex-start;
         align-items: center;
-
-        .main_link {
-            display: flex;
-            align-items: center;
-            gap: 13px;
-        }
-
-        &__logo {
-            width: 59px;
-            height: 51px;
-        }
-
-        &__brand_txt {
-            margin-top: 4px;
-            @include font-style($size: 27px, $weight: 300);
-            text-transform: uppercase;
-            letter-spacing: 0.025em;
-            color: #222222;
-
-            &__d {
-                font-weight: 900;
-                color: $siteColor;
-            }
-        }
+        gap: 46px;
     }
 
     &__right {
@@ -203,12 +203,8 @@
 }
 
 .browse_search_container {
-    padding-left: 24px;
-    height: 38px;
     display: flex;
     justify-content: flex-start;
-    gap: 0px;
-    align-items: stretch;
 
     &__browse_button {
         height: 38px;
@@ -250,7 +246,7 @@
         cursor: pointer;
     }
 
-    &-box {
+    .box {
         background-color: #FFF;
         padding: 20px;
         border-radius: 5px;
@@ -260,9 +256,9 @@
         z-index: 1;
     }
 
-    &-title {
+    .title {
         border-bottom: #e8e8e8 solid 1px;
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
         text-transform: uppercase;
         @include font-style($size: 14px, $weight: 400);
         color: #232323;
@@ -276,7 +272,7 @@
         }
     }
 
-    &-link {
+    .link {
         @include font-style($size: 14px, $weight: 400, $line-height: 28px);
         color: #646464;
         text-decoration: none;

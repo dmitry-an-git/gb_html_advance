@@ -1,0 +1,108 @@
+.navigation {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+
+    .menu {
+        display: flex;
+        justify-content: center;
+
+        gap: 34px;
+        list-style: none;
+
+        &__li {
+            position: relative;
+            // width: $width;
+            height: 48px;
+            // padding-top: 19px;
+            // padding-bottom: 19px;
+            padding-left: 8px;
+            padding-right: 8px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+
+            &:hover .menu__box {
+                display: flex;
+            }
+        }
+
+        &__selected {
+            border-bottom: 3px solid $siteColor;
+            box-sizing: border-box;
+        }
+
+        &__link {
+            @include font-style($size: 14px, $weight: 700);
+            text-transform: uppercase;
+            color: #222222;
+
+            &:hover {
+                color: $siteColor;
+            }
+        }
+
+        &__box {
+            background-color: #FFF;
+            border-radius: 5px;
+            padding: 20px;
+            position: absolute;
+            top: 43px;
+            border: #e8e8e8 solid 1px;
+            display: none;
+            gap: 32px;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                background-color: #FFF;
+                top: -9px;
+                left: $width/2;
+                right: auto;
+                transform: rotate(45deg);
+                border-top: #e8e8e8 solid 1px;
+                border-left: #e8e8e8 solid 1px;
+            }
+        }
+
+        &__title {
+            border-bottom: #e8e8e8 solid 1px;
+            @include font-style($size: 14px, $weight: 400);
+            color: #232323;
+            text-transform: uppercase;
+            padding-bottom: 8px;
+            width: 235px;
+            margin-bottom: 16px;
+        }
+
+        &__itemlink {
+            @include font-style($size: 14px, $line-height: 28px, $weight: 400);
+            color: #646464;
+            display: block;
+
+            &:hover {
+                color: $siteColor;
+            }
+        }
+    }
+
+}
+
+
+
+.last:hover {
+
+    .menu__box {
+        right: 0;
+        left: auto;
+    }
+
+    .menu__box::before {
+        right: 50px;
+        left: auto;
+    }
+
+}

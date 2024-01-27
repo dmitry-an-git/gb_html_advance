@@ -1,41 +1,52 @@
-.bread_crumbs {
+.breadcrumbs {
 
     display: table;
     width: $siteWidth;
     height: 148px;
     background-color: #f8f3f4;
 
-
     &__left {
         display: table-cell;
         @include font-style($size: 24px, $line-height: 20px, $weight: 900);
         color: $siteColor;
         text-transform: uppercase;
-
         vertical-align: middle;
     }
 
     &__right {
         display: table-cell;
-        @include font-style($size: 14px, $line-height: 20px, $weight: 300);
-        color: black;
-        text-transform: uppercase;
-
         vertical-align: middle;
-        text-align: right;
+    }
 
-        .current {
-            font-weight: 700;
-            color: $siteColor;
-        }
+    &__ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+    &__li:not(:last-child)::after {
+        content: "/";
+        padding-left: 8px;
+        padding-right: 8px;
+        color: #636363;
+        @include font-style($size: 14px, $line-height: 20px, $weight: 300);
+    }
+
+    &__li:last-child .breadcrumbs__link {
+        color: $siteColor;
+        font-weight: 700;
+    }
+
+    &__link {
+        @include font-style($size: 14px, $line-height: 20px, $weight: 300);
+        text-transform: uppercase;
+        color: #636363;
     }
 }
 
 @supports (display:flex) {
-    .bread_crumbs {
+    .breadcrumbs {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
     }
 }

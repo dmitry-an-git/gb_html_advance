@@ -1,0 +1,128 @@
+@import "scss/vars";
+@import "scss/mixins";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import "scss/header";
+@import "scss/navigation";
+@import "scss/featured";
+@import "scss/banner";
+@import "scss/categories";
+@import "scss/crumbs";
+@import "scss/product";
+@import "scss/likes";
+@import "scss/footer";
+@import "scss/basket";
+@import "scss/information";
+@import "scss/subscribe";
+@import "scss/video";
+@import "scss/search";
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+    text-decoration: none;
+}
+
+.center {
+    padding-left: calc(50% - $siteWidth / 2);
+    padding-right: calc(50% - $siteWidth / 2);
+}
+
+.customer_values {
+    display: flex;
+    justify-content: flex-start;
+    height: 529px;
+    padding-bottom: 97px;
+
+    .best_offer {
+        width: 767px;
+        position: relative;
+
+        &__shade_mask {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            z-index: 1;
+        }
+
+        &__img {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            z-index: -1;
+        }
+
+        &__txt {
+            margin-top: 146px;
+            margin-left: 39px;
+            position: relative;
+            z-index: 2;
+
+            h1 {
+                @include font-style($size: 53.7px, $line-height: 1.2, $weight: 700);
+                color: #ffffff;
+
+                .pink {
+                    color: $siteColor;
+                }
+            }
+
+            h2 {
+                @include font-style($size: 32.2px, $line-height: 1.2, $weight: 700);
+                color: #ffffff;
+            }
+        }
+    }
+
+    .values {
+        position: relative;
+        width: 1140px - 767px;
+        height: 529px;
+        background-color: #222224;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 60px;
+
+
+        &__cell {
+            display: grid;
+            grid-template-columns: 114px 1fr;
+            padding-right: 36px;
+
+            &__img_container {
+                grid-column: 1/2;
+                grid-row: 1/2;
+                width: 111px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+            }
+
+            &__text_container {
+                grid-column: 2/3;
+                grid-row: 1/2;
+
+                h1 {
+                    @include font-style($size: 20px, $line-height: 1.2, $weight: 700);
+                    color: #fbfbfb;
+                    margin-bottom: 17px;
+                }
+
+                p {
+                    @include font-style($size: 14px, $line-height: 24px, $weight: 300);
+                    color: #fbfbfb;
+                }
+            }
+        }
+    }
+}

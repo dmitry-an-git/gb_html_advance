@@ -1,0 +1,53 @@
+.information {
+    padding-top: 109px;
+    padding-bottom: 90px;
+    display: flex;
+    gap: 64px;
+
+    &__logo {
+        margin-bottom: 29px;
+    }
+
+    &__left {
+        width: 760px;
+    }
+
+    &__txt {
+        @include font-style($size: 14px, $line-height: 24px, $weight: 300);
+        color: #898989;
+    }
+
+    &__right {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        width: 100%;
+        margin-top: 14px;
+
+        &__column {
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                @include font-style($size: 18px, $weight: 700);
+                color: $siteColor;
+                text-transform: capitalize;
+                margin-bottom: 45px;
+            }
+
+            a {
+                @include font-style($size: 16px, $weight: 400);
+                color: #898989;
+                margin-bottom: 26px;
+
+                &:hover {
+                    color: $siteColor;
+                }
+            }
+
+            a:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}

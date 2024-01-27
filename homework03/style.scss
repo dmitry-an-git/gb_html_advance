@@ -11,13 +11,19 @@
 @import "scss/likes";
 @import "scss/footer";
 @import "scss/basket";
+@import "scss/information";
 @import "scss/subscribe";
 @import "scss/video";
+@import "scss/search";
 
 
 * {
     padding: 0px;
     margin: 0px;
+    text-decoration: none;
+}
+
+a {
     text-decoration: none;
 }
 
@@ -115,80 +121,6 @@ summary::-webkit-details-marker {
                 p {
                     @include font-style($size: 14px, $line-height: 24px, $weight: 300);
                     color: #fbfbfb;
-                }
-            }
-        }
-    }
-}
-
-
-.information {
-    padding-top: 109px;
-    padding-bottom: 90px;
-    display: flex;
-    gap: 64px;
-    // width: 100%;
-
-    &__left {
-        display: flex;
-        flex-direction: column;
-        gap: 29px;
-        width: 760px;
-
-        &__logo {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 13px;
-
-            &__img {
-                width: 59px;
-                height: 51px;
-            }
-
-            &__txt {
-                margin-top: 4px;
-                @include font-style($size: 27px, $line-height: 32px, $weight: 300);
-                text-transform: uppercase;
-                color: #222222;
-
-                &__d {
-                    font-weight: 900;
-                    color: $siteColor;
-                }
-            }
-        }
-
-        &__txt {
-            @include font-style($size: 14px, $line-height: 24px, $weight: 300);
-            color: #898989;
-        }
-    }
-
-    &__right {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-        width: 100%;
-
-        &__cell {
-            display: flex;
-            flex-direction: column;
-
-            h1 {
-                @include font-style($size: 18px, $line-height: 26px, $weight: 700);
-                color: $siteColor;
-                text-transform: capitalize;
-                margin-bottom: 45px;
-            }
-
-            a {
-                @include font-style($size: 16px, $weight: 400);
-                color: #898989;
-                margin-bottom: 26px;
-
-                &:hover {
-                    color: $siteColor;
                 }
             }
         }
