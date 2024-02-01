@@ -1,0 +1,13 @@
+.video_zone {
+    position: relative;
+    margin-top: 90px;
+    padding-bottom: 0px;
+    height: 400px;
+
+    .video_player {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+}

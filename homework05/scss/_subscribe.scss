@@ -1,0 +1,129 @@
+.subscribe {
+    position: relative;
+    display: flex;
+    background: rgba(244, 244, 244, 0.70);
+    height: 448px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: inherit;
+        z-index: -1;
+        background-image: url(img/subscribe_background.png);
+        background-size: cover;
+    }
+
+    &-left {
+        height: inherit;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-right: 1px solid #fff;
+    }
+
+    &-right {
+        width: 50%;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .quote {
+
+        &-box {
+            display: flex;
+            gap: 28px;
+        }
+
+        &-face {
+            height: 83px;
+        }
+
+        &-text-box {
+            padding-right: 40px;
+        }
+
+        &-text {
+            @include font-style($size: 16px, $line-height: 26px, $weight: 400);
+            font-style: italic;
+            color: #222224;
+            // width: 400px;
+            margin-bottom: 19px;
+        }
+
+        &-name {
+            @include font-style($size: 16px, $weight: 700);
+            color: $siteColor;
+            width: 360px;
+        }
+
+        &-place {
+            @include font-style($size: 12px, $weight: 300);
+            color: #222224;
+            width: 360px;
+        }
+    }
+
+    .subscribe-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            @include font-style($size: 24px, $line-height: 167.2%, $weight: 400);
+            text-transform: uppercase;
+            color: #222224;
+
+        }
+
+        .subtitle {
+            @include font-style($size: 18px, $line-height: 167.2%, $weight: 400);
+            color: #222224;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+        }
+
+        .subscribe-form {
+            display: flex;
+            gap: 0px;
+
+            input {
+                box-sizing: border-box;
+                border: none;
+                width: 256px;
+                height: 49px;
+                background-color: #E1E1E1;
+                border-top-left-radius: 24px;
+                border-bottom-left-radius: 24px;
+                padding-left: 22px;
+                @include font-style($size: 14px, $weight: 400);
+                color: #222224;
+            }
+
+            button {
+                box-sizing: border-box;
+                border: none;
+                width: 100px;
+                height: 49px;
+                background-color: $siteColor;
+                border-top-right-radius: 24px;
+                border-bottom-right-radius: 24px;
+                @include font-style($size: 14px, $weight: 400);
+                color: #FFF;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+
+
+    }
+
+
+}
