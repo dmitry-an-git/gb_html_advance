@@ -153,8 +153,22 @@
 
 @media(max-width: 934px) {
 
+    .subscribe {
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 60px;
+
+        .quote-text-box {
+            width: 90%;
+            padding-right: 0px;
+        }
+    }
+
     .subscribe-left {
-        display: none;
+        width: 100%;
+        border: none;
+        margin-top: 60px;
+        margin-bottom: 60px;
     }
 
     .subscribe-right {

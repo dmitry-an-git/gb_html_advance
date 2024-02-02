@@ -41,3 +41,20 @@
         }
     }
 }
+
+
+@media(max-width: 575px) {
+    footer {
+        flex-direction: column;
+        gap: 20px;
+
+        .footer-right {
+            order: 0;
+        }
+
+        .footer-left {
+            order: 1;
+        }
+    }
+
+}
