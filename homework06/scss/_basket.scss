@@ -1,0 +1,216 @@
+.basket {
+
+    padding-top: 90px;
+
+    &__table {
+
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 44px;
+
+        .row {
+            display: table-row;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cell {
+            display: table-cell;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .header {
+            @include font-style($size: 13px, $weight: 700);
+            text-transform: uppercase;
+            letter-spacing: -0.015em;
+            color: #222222;
+
+        }
+
+        .first {
+            text-align: left;
+        }
+
+        .txt {
+            @include font-style($size: 13px, $weight: 400);
+            color: #656565;
+        }
+
+        .product-details {
+            text-align: left;
+
+            .product-info {
+                float: left;
+            }
+
+            .product-image {
+                width: 100px;
+                height: 115px;
+                background-color: rgba(101, 169, 200, 0.09);
+                float: left;
+                margin-right: 21px;
+            }
+
+            h1 {
+                @include font-style($size: 13px, $weight: 400);
+                text-transform: uppercase;
+                color: #222222;
+                margin-top: 13px;
+                margin-bottom: 38px;
+            }
+
+            h2 {
+                @include font-style($size: 13px, $weight: 400);
+                color: #575757;
+            }
+
+            .value {
+                font-weight: 300;
+                color: #6f6e6e;
+            }
+        }
+
+        .quantity-input {
+            width: 54px;
+            height: 30px;
+            text-align: center;
+            border: 1px solid #eaeaea;
+
+        }
+
+        .action-icon {
+            width: 20px;
+            height: auto;
+            cursor: pointer;
+        }
+
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 63px;
+
+
+        button {
+            padding: 20px 39px;
+            background-color: #fff;
+            border: 1px solid #eaeaea;
+
+            text-transform: uppercase;
+            @include font-style($size: 14px, $weight: 700);
+            color: #4a4a4a;
+
+            &:hover {
+                background-color: $siteColor;
+                border-color: $siteColor;
+                color: white;
+            }
+
+        }
+    }
+
+    &__checkout {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 79px;
+
+        h1 {
+            @include font-style($size: 16px, $weight: 700);
+            text-transform: uppercase;
+            color: #222222;
+            margin-bottom: 22px;
+        }
+
+        .pink {
+            color: $siteColor;
+        }
+
+        h3 {
+            @include font-style($size: 11px, $weight: 400);
+            text-transform: uppercase;
+            color: #4a4a4a;
+            margin-bottom: 14px;
+        }
+
+        p {
+            @include font-style($size: 14px, $weight: 300);
+            margin-top: 6px;
+            margin-bottom: 20px;
+        }
+
+        .address_fields {
+            width: 355px;
+        }
+
+        .coupon_fields {
+            width: 355px;
+        }
+
+        .checkout_box {
+            width: 360px;
+            background-color: #f5f3f3;
+            box-sizing: border-box;
+            padding: 42px;
+            text-align: right;
+            align-self: flex-start;
+
+            h1 {
+                padding-bottom: 22px;
+                border-bottom: 1px solid #e2e2e2;
+                margin-bottom: 17px;
+            }
+
+            .button_big {
+                text-align: center;
+                padding-top: 19px;
+                padding-bottom: 19px;
+                width: 100%;
+                background-color: $siteColor;
+                color: white;
+                border: 1px solid $siteColor;
+                text-transform: uppercase;
+                @include font-style($size: 16px, $weight: 700);
+
+                &:hover {
+                    background-color: #fff;
+                    color: $siteColor;
+                }
+
+            }
+
+        }
+
+        input {
+            width: 100%;
+            padding: 16px;
+            @include font-style($size: 13px, $weight: 300);
+            color: #b1b1b1;
+            margin-bottom: 20px;
+            border: 1px solid #eaeaea;
+            box-sizing: border-box;
+        }
+
+        .button_small {
+            width: auto;
+            padding: 13px;
+            background-color: #fff;
+            border: 1px solid #eaeaea;
+            margin-top: 8px;
+
+            text-transform: uppercase;
+            @include font-style($size: 11px, $weight: 700);
+            color: #4a4a4a;
+
+            &:hover {
+                background-color: $siteColor;
+                border-color: $siteColor;
+                color: white;
+            }
+        }
+    }
+}

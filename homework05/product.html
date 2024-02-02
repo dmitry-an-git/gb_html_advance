@@ -258,23 +258,23 @@
         </nav>
     </section>
     <section class="search center">
-        <div class="search__cats">
+        <div class="search-left categories">
             <details open>
                 <summary class="title">Category</summary>
-                <ul class="search_cats_ul">
-                    <li class="search__cats_li"><a href="#" class="search__cats_link">Accessories</a></li>
-                    <li class="search__cats_li"><a href="#" class="search__cats_link">Bags</a></li>
-                    <li class="search__cats_li"><a href="#" class="search__cats_link">Denim</a></li>
-                    <li class="search__cats_li"><a href="#" class="search__cats_link">Hoodies & Sweaters</a></li>
-                    <li class="search__cats_li"><a href="#" class="search__cats_link">Jackets & Coats</a></li>
-                    <li class="search__cats_li"><a href="#" class="search__cats_link">Pants</a></li>
-                    <li class="search__cats_li"><a href="#" class="search__cats_link">Polos</a></li>
-                    <li class="search__cats_li"><a href="#" class="search__cats_link">Shirts</a></li>
-                    <li class="search__cats_li"><a href="#" class="search__cats_link">Shoes</a></li>
-                    <li class="search__cats_li"><a href="#" class="search__cats_link">Shorts</a></li>
-                    <li class="search__cats_li"><a href="#" class="search__cats_link">Sweater & Knits</a></li>
-                    <li class="search__cats_li"><a href="#" class="search__cats_link">T-Shirts</a></li>
-                    <li class="search__cats_li"><a href="#" class="search__cats_link">Tanks</a></li>
+                <ul class="categories-ul">
+                    <li class="categories-li"><a href="#" class="link">Accessories</a></li>
+                    <li class="categories-li"><a href="#" class="link">Bags</a></li>
+                    <li class="categories-li"><a href="#" class="link">Denim</a></li>
+                    <li class="categories-li"><a href="#" class="link">Hoodies & Sweaters</a></li>
+                    <li class="categories-li"><a href="#" class="link">Jackets & Coats</a></li>
+                    <li class="categories-li"><a href="#" class="link">Pants</a></li>
+                    <li class="categories-li"><a href="#" class="link">Polos</a></li>
+                    <li class="categories-li"><a href="#" class="link">Shirts</a></li>
+                    <li class="categories-li"><a href="#" class="link">Shoes</a></li>
+                    <li class="categories-li"><a href="#" class="link">Shorts</a></li>
+                    <li class="categories-li"><a href="#" class="link">Sweater & Knits</a></li>
+                    <li class="categories-li"><a href="#" class="link">T-Shirts</a></li>
+                    <li class="categories-li"><a href="#" class="link">Tanks</a></li>
                 </ul>
             </details>
             <details>
@@ -284,76 +284,122 @@
                 <summary class="title">Designer</summary>
             </details>
         </div>
-        <div class="search__right">
-            <div class="search__parameters">
-                <div class="search__col">
-                    <h2 class="search__h2">Trending Now</h2>
-                    <ul class="search__styles_ul">
-                        <li class="search__styles_li"><a href="#" class="search__styles_link">Bohemian</a></li>
-                        <li class="search__styles_li"><a href="#" class="search__styles_link">Floral</a></li>
-                        <li class="search__styles_li"><a href="#" class="search__styles_link">Lace</a></li>
+        <div class="search-right">
+            <div class="parameters-box">
+                <div class="search-col styles">
+                    <h2 class="title">Trending Now</h2>
+                    <ul class="styles-ul">
+                        <li class="styles-li"><a href="#" class="text">Bohemian</a></li>
+                        <li class="styles-li"><a href="#" class="text">Floral</a></li>
+                        <li class="styles-li"><a href="#" class="text">Lace</a></li>
                     </ul>
-                    <ul class="search__styles_ul">
-                        <li class="search__styles_li"><a href="#" class="search__styles_link">Lace</a></li>
-                        <li class="search__styles_li"><a href="#" class="search__styles_link">Floral</a></li>
-                        <li class="search__styles_li"><a href="#" class="search__styles_link">Bohemian</a></li>
+                    <ul class="styles-ul">
+                        <li class="styles-li"><a href="#" class="text">Lace</a></li>
+                        <li class="styles-li"><a href="#" class="text">Floral</a></li>
+                        <li class="styles-li"><a href="#" class="text">Bohemian</a></li>
                     </ul>
                 </div>
-                <div class="search__col">
-                    <h2 class="search__h2">Size</h2>
-                    <fieldset class="search__sizes">
-                        <label for="#" class="search__sizes_label"><input type="checkbox" hidden><span
-                                class="checkbox-style"></span> XXS</label>
-                        <label for="#" class="search__sizes_label"><input type="checkbox" hidden><span
-                                class="checkbox-style"></span> XS</label>
-                        <label for="#" class="search__sizes_label"><input type="checkbox" hidden><span
-                                class="checkbox-style"></span> S</label>
-                        <label for="#" class="search__sizes_label"><input type="checkbox" hidden><span
-                                class="checkbox-style"></span> M</label>
-                        <label for="#" class="search__sizes_label"><input type="checkbox" hidden><span
-                                class="checkbox-style"></span> L</label>
-                        <label for="#" class="search__sizes_label"><input type="checkbox" hidden><span
-                                class="checkbox-style"></span> XL</label>
-                        <label for="#" class="search__sizes_label"><input type="checkbox" hidden><span
-                                class="checkbox-style"></span> XXL</label>
+                <div class="search-col size">
+                    <h2 class="title">Size</h2>
+                    <fieldset class="sizes">
+                        <div class="checkbox-box">
+                            <input id="size-XXS" class="checkbox" type="checkbox">
+                            <label for="size-XXS" class="size-label">
+                                <div class="custom-checkbox"></div>
+                                <p class="text">XXS</p>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-box">
+                            <input id="size-XS" class="checkbox" type="checkbox">
+                            <label for="size-XS" class="size-label">
+                                <div class="custom-checkbox"></div>
+                                <p class="text">XS</p>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-box">
+                            <input id="size-S" class="checkbox" type="checkbox">
+                            <label for="size-S" class="size-label">
+                                <div class="custom-checkbox"></div>
+                                <p class="text">S</p>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-box">
+                            <input id="size-M" class="checkbox" type="checkbox">
+                            <label for="size-M" class="size-label">
+                                <div class="custom-checkbox"></div>
+                                <p class="text">M</p>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-box">
+                            <input id="size-L" class="checkbox" type="checkbox">
+                            <label for="size-L" class="size-label">
+                                <div class="custom-checkbox"></div>
+                                <p class="text">L</p>
+                            </label>
+                        </div>
+
+
+                        <div class="checkbox-box">
+                            <input id="size-XL" class="checkbox" type="checkbox">
+                            <label for="size-XL" class="size-label">
+                                <div class="custom-checkbox"></div>
+                                <p class="text">XL</p>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-box">
+                            <input id="size-XXL" class="checkbox" type="checkbox">
+                            <label for="size-XXL" class="size-label">
+                                <div class="custom-checkbox"></div>
+                                <p class="text">XXL</p>
+                            </label>
+                        </div>
+
                     </fieldset>
                 </div>
-                <div class="search__col">
-                    <h2 class="search__h2">Price</h2>
-                    <img src="img/prices_radio.png" alt="set price range" class="search__prices_img">
-                    <div class="search__prices">
-                        <p>$52</p>
-                        <p>1400</p>
+                <div class="search-col prices">
+                    <h2 class="title">Price</h2>
+                    <img src="img/prices_radio.png" alt="set range" class="radio-img">
+                    <div class="radio-range">
+                        <p class="text">$52</p>
+                        <p class="text">$1400</p>
                     </div>
                 </div>
             </div>
-            <div class="search__sort">
-                <div class="search__sort-field">
-                    Sort By
+            <div class="sorting-box">
+                <div class="label-dropout-box">
+                    <div class="label">
+                        Sort By
+                    </div>
+                    <div class="label">
+                        Name
+                        <svg xmlns="http://www.w3.org/2000/svg" height="12" width="8" viewBox="0 0 320 512">
+                            <path
+                                d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                        </svg>
+                    </div>
                 </div>
-                <button class="search__sort-field search__sort-field_break">
-                    Name
-                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="8" viewBox="0 0 320 512">
-                        <path
-                            d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
-                    </svg>
-                </button>
-
-                <div class="search__sort-field">
-                    Show
+                <div class="label-dropout-box">
+                    <div class="label">
+                        Show
+                    </div>
+                    <div class="label">
+                        09
+                        <svg xmlns="http://www.w3.org/2000/svg" height="12" width="8" viewBox="0 0 320 512">
+                            <path
+                                d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                        </svg>
+                    </div>
                 </div>
-                <button class="search__sort-field search__sort-field_break">
-                    09
-                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="8" viewBox="0 0 320 512">
-                        <path
-                            d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
-                    </svg>
-                </button>
             </div>
-            <div class="search__results">
-                <article class="search__cell">
-                    <div class="search__cell__img_wrapper">
-                        <img src="img/featured1.png" alt="product">
+            <div class="results-box">
+                <article class="product-card product-card_search">
+                    <div class="img-box">
+                        <img src="img/featured1.png" alt="product" class="product-img">
                         <button>
                             <svg xmlns="http://www.w3.org/2000/svg" width="27" height="25" viewBox="0 0 27 25"
                                 fill="none">
@@ -370,14 +416,14 @@
                             <p>Add to Cart</p>
                         </button>
                     </div>
-                    <div class="search__cell__text">
+                    <div class="text-box">
                         <h1>Mango People T-shirt</h1>
                         <h2>$52.00</h2>
                     </div>
                 </article>
-                <article class="search__cell">
-                    <div class="search__cell__img_wrapper">
-                        <img src="img/featured1.png" alt="product">
+                <article class="product-card product-card_search">
+                    <div class="img-box">
+                        <img src="img/featured1.png" alt="product" class="product-img">
                         <button>
                             <svg xmlns="http://www.w3.org/2000/svg" width="27" height="25" viewBox="0 0 27 25"
                                 fill="none">
@@ -394,14 +440,14 @@
                             <p>Add to Cart</p>
                         </button>
                     </div>
-                    <div class="search__cell__text">
+                    <div class="text-box">
                         <h1>Mango People T-shirt</h1>
                         <h2>$52.00</h2>
                     </div>
                 </article>
-                <article class="search__cell">
-                    <div class="search__cell__img_wrapper">
-                        <img src="img/featured1.png" alt="product">
+                <article class="product-card product-card_search">
+                    <div class="img-box">
+                        <img src="img/featured1.png" alt="product" class="product-img">
                         <button>
                             <svg xmlns="http://www.w3.org/2000/svg" width="27" height="25" viewBox="0 0 27 25"
                                 fill="none">
@@ -418,14 +464,14 @@
                             <p>Add to Cart</p>
                         </button>
                     </div>
-                    <div class="search__cell__text">
+                    <div class="text-box">
                         <h1>Mango People T-shirt</h1>
                         <h2>$52.00</h2>
                     </div>
                 </article>
-                <article class="search__cell">
-                    <div class="search__cell__img_wrapper">
-                        <img src="img/featured1.png" alt="product">
+                <article class="product-card product-card_search">
+                    <div class="img-box">
+                        <img src="img/featured1.png" alt="product" class="product-img">
                         <button>
                             <svg xmlns="http://www.w3.org/2000/svg" width="27" height="25" viewBox="0 0 27 25"
                                 fill="none">
@@ -442,14 +488,14 @@
                             <p>Add to Cart</p>
                         </button>
                     </div>
-                    <div class="search__cell__text">
+                    <div class="text-box">
                         <h1>Mango People T-shirt</h1>
                         <h2>$52.00</h2>
                     </div>
                 </article>
-                <article class="search__cell">
-                    <div class="search__cell__img_wrapper">
-                        <img src="img/featured1.png" alt="product">
+                <article class="product-card product-card_search">
+                    <div class="img-box">
+                        <img src="img/featured1.png" alt="product" class="product-img">
                         <button>
                             <svg xmlns="http://www.w3.org/2000/svg" width="27" height="25" viewBox="0 0 27 25"
                                 fill="none">
@@ -466,14 +512,14 @@
                             <p>Add to Cart</p>
                         </button>
                     </div>
-                    <div class="search__cell__text">
+                    <div class="text-box">
                         <h1>Mango People T-shirt</h1>
                         <h2>$52.00</h2>
                     </div>
                 </article>
-                <article class="search__cell">
-                    <div class="search__cell__img_wrapper">
-                        <img src="img/featured1.png" alt="product">
+                <article class="product-card product-card_search">
+                    <div class="img-box">
+                        <img src="img/featured1.png" alt="product" class="product-img">
                         <button>
                             <svg xmlns="http://www.w3.org/2000/svg" width="27" height="25" viewBox="0 0 27 25"
                                 fill="none">
@@ -490,14 +536,14 @@
                             <p>Add to Cart</p>
                         </button>
                     </div>
-                    <div class="search__cell__text">
+                    <div class="text-box">
                         <h1>Mango People T-shirt</h1>
                         <h2>$52.00</h2>
                     </div>
                 </article>
-                <article class="search__cell">
-                    <div class="search__cell__img_wrapper">
-                        <img src="img/featured1.png" alt="product">
+                <article class="product-card product-card_search">
+                    <div class="img-box">
+                        <img src="img/featured1.png" alt="product" class="product-img">
                         <button>
                             <svg xmlns="http://www.w3.org/2000/svg" width="27" height="25" viewBox="0 0 27 25"
                                 fill="none">
@@ -514,14 +560,14 @@
                             <p>Add to Cart</p>
                         </button>
                     </div>
-                    <div class="search__cell__text">
+                    <div class="text-box">
                         <h1>Mango People T-shirt</h1>
                         <h2>$52.00</h2>
                     </div>
                 </article>
-                <article class="search__cell">
-                    <div class="search__cell__img_wrapper">
-                        <img src="img/featured1.png" alt="product">
+                <article class="product-card product-card_search">
+                    <div class="img-box">
+                        <img src="img/featured1.png" alt="product" class="product-img">
                         <button>
                             <svg xmlns="http://www.w3.org/2000/svg" width="27" height="25" viewBox="0 0 27 25"
                                 fill="none">
@@ -538,14 +584,14 @@
                             <p>Add to Cart</p>
                         </button>
                     </div>
-                    <div class="search__cell__text">
+                    <div class="text-box">
                         <h1>Mango People T-shirt</h1>
                         <h2>$52.00</h2>
                     </div>
                 </article>
-                <article class="search__cell">
-                    <div class="search__cell__img_wrapper">
-                        <img src="img/featured1.png" alt="product">
+                <article class="product-card product-card_search">
+                    <div class="img-box">
+                        <img src="img/featured1.png" alt="product" class="product-img">
                         <button>
                             <svg xmlns="http://www.w3.org/2000/svg" width="27" height="25" viewBox="0 0 27 25"
                                 fill="none">
@@ -562,26 +608,24 @@
                             <p>Add to Cart</p>
                         </button>
                     </div>
-                    <div class="search__cell__text">
+                    <div class="text-box">
                         <h1>Mango People T-shirt</h1>
                         <h2>$52.00</h2>
                     </div>
                 </article>
             </div>
-            <div class="search__footer">
-                <ul class="search__pagination-ul">
-                    <li class="search__pagination-li"><a href="#" class="search__pagination-link">&lt
+            <div class="pagination">
+                <ul class="pagination-ul">
+                    <li class="pagination-li"><a href="#" class="pagination-link">&lt
                         </a>
                     </li>
-                    <li class="search__pagination-li"><a href="#"
-                            class="search__pagination-link search__pagination-link_selected">1</a></li>
-                    <li class="search__pagination-li"><a href="#" class="search__pagination-link">2</a></li>
-                    <li class="search__pagination-li"><a href="#" class="search__pagination-link">3</a></li>
-                    <li class="search__pagination-li"><a href="#" class="search__pagination-link">4</a></li>
-                    <li class="search__pagination-li"><a href="#" class="search__pagination-link">5</a></li>
-                    <li class="search__pagination-li"><a href="#" class="search__pagination-link">6...20</a></li>
-                    <li class="search__pagination-li"><a href="#"
-                            class="search__pagination-link search__pagination-link_selected">&gt</a></li>
+                    <li class="pagination-li"><a href="#" class="pagination-link pagination-link_selected">1</a></li>
+                    <li class="pagination-li"><a href="#" class="pagination-link">2</a></li>
+                    <li class="pagination-li"><a href="#" class="pagination-link">3</a></li>
+                    <li class="pagination-li"><a href="#" class="pagination-link">4</a></li>
+                    <li class="pagination-li"><a href="#" class="pagination-link">5</a></li>
+                    <li class="pagination-li"><a href="#" class="pagination-link">6...20</a></li>
+                    <li class="pagination-li"><a href="#" class="pagination-link pagination-link_selected">&gt</a></li>
                 </ul>
                 <div class="search__view-all-button">
                     View All
@@ -589,6 +633,48 @@
             </div>
 
         </div>
+    </section>
+    <section class="customer-values-right customer-values-right_search center">
+
+        <article class="value-box value-box_search">
+            <div class="img-container">
+                <img src="img/delivery.svg" alt="" width="45px" height="32px">
+            </div>
+            <div class="text-box">
+                <h1 class="title">Free Delivery</h1>
+                <p class="text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
+                    extensive
+                    models.
+                </p>
+            </div>
+        </article>
+
+        <article class="value-box value-box_search">
+            <div class="img-container">
+                <img src="img/sales.svg" alt="" width="40px" , height="40px">
+            </div>
+            <div class="text-box">
+                <h1 class="title">Sales & discounts</h1>
+                <p class="text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
+                    extensive
+                    models.
+                </p>
+            </div>
+        </article>
+
+        <article class="value-box value-box_search">
+            <div class="img-container">
+                <img src="img/quality.svg" alt="" width="47" height="35">
+            </div>
+            <div class="text-box">
+                <h1 class="title">Quality assurance</h1>
+                <p class="text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
+                    extensive
+                    models.
+                </p>
+            </div>
+        </article>
+
     </section>
     <section class="subscribe center">
         <div class="subscribe-left">

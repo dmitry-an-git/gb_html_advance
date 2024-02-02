@@ -1,0 +1,267 @@
+.search {
+    display: flex;
+    padding-top: 59px;
+    padding-bottom: 110px;
+    gap: 50px;
+
+    .categories {
+        width: 243px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        .title {
+            list-style: none;
+            @include font-style($size: 14px, $weight: 700);
+            color: $siteColor;
+            text-transform: uppercase;
+            padding-top: 12px;
+            padding-bottom: 15px;
+            padding-left: 11px;
+            border-left: 5px solid $siteColor;
+            border-bottom: 1px solid #ebebeb;
+
+            &::after {
+                content: '▼';
+                float: right;
+                transition: transform 0.3s ease;
+            }
+        }
+
+        details[open]>.title::after {
+            transform: rotate(180deg);
+        }
+
+        &-ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-li {
+            list-style-type: none;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 17px;
+        }
+
+        .link {
+            @include font-style($size: 14px, $weight: 400);
+            color: #6f6e6e;
+        }
+    }
+
+    &-right {
+        width: 100%;
+    }
+
+    .parameters-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 32px;
+
+        .title {
+            @include font-style($size: 14px, $weight: 700);
+            margin-top: 12px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            color: #6f6e6e;
+        }
+
+        .text {
+            @include font-style($size: 14px, $weight: 400);
+            color: #6f6e6e;
+        }
+
+        .styles {
+            &-ul {
+                display: flex;
+                margin-bottom: 10px;
+                list-style-type: none;
+            }
+
+            &-li:not(:last-child)::after {
+                content: "|";
+                padding-left: 16px;
+                padding-right: 16px;
+                color: #6f6e6e;
+                @include font-style($size: 14px, $weight: 400);
+
+            }
+
+        }
+
+        .sizes {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            border: none;
+            gap: 10px;
+
+            .checkbox-box {
+                display: flex;
+            }
+
+            .checkbox {
+                visibility: hidden;
+                position: absolute;
+
+                &:checked~label .custom-checkbox {
+                    background-color: #6f6e6e;
+                }
+            }
+
+            .size-label {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .custom-checkbox {
+                height: 14px;
+                width: 14px;
+                border: 1px solid #6f6e6e;
+                border-radius: 2px;
+                background-color: white;
+            }
+        }
+
+        .prices {
+            display: flex;
+            flex-direction: column;
+            // justify-content: space-between;
+            // margin-top: 10px;
+
+            .radio-img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .radio-range {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+    }
+
+    .sorting-box {
+        width: 100%;
+        display: flex;
+        gap: 16px;
+        padding: 10px;
+        margin-bottom: 48px;
+        background-color: #f3f3f3;
+
+        .label-dropout-box {
+            display: flex;
+
+            .label {
+                @include font-style($size: 14px, $weight: 400);
+                color: #6f6e6e;
+                background-color: #ffffff;
+                border: 1px solid #ebebeb;
+                padding: 5px 10px;
+                display: flex;
+                gap: 15px;
+                align-items: center;
+                box-sizing: border-box;
+
+                &:last-of-type {
+                    border-left: none;
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+
+    }
+
+    .results-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        // column-gap: 30px;
+        row-gap: 39px;
+        margin-bottom: 48px;
+    }
+
+    .product-card_search {
+        width: 30%;
+
+        .img-box {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: space-between;
+
+        &-ul {
+            height: 44px;
+            background-color: #ffffff;
+            border: 1px solid #ebebeb;
+            border-radius: 3px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            padding-left: 16px;
+            padding-right: 16px;
+            list-style-type: none;
+        }
+
+        &-li {
+            @include font-style($size: 16px, $weight: 700);
+        }
+
+        &-link {
+            color: #c4c4c4;
+
+            &_selected {
+                color: $siteColor;
+            }
+        }
+    }
+
+    &__view-all-button {
+        width: 150px;
+        height: 44px;
+        transition: 0.3s ease;
+        background-color: #ffffff;
+        border: 1px solid $siteColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: $siteColor;
+        @include font-style($size: 16px, $weight: 700);
+        border-radius: 3px;
+
+
+        &:hover {
+            background-color: $siteColor;
+            color: white;
+        }
+
+    }
+
+}
+
+// .customer-values-search {
+
+//     display: flex;
+//     flex-direction: row;
+//     padding-top: 89px;
+//     padding-bottom: 114px;
+//     // width: 100%;
+//     // padding-right: 36px;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-around;
+//     // gap: 60px;
+//     background-color: #222224;
+// }

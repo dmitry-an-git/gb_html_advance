@@ -1,0 +1,113 @@
+.navigation {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+
+    .navigation-ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 34px;
+    }
+
+    .navigation-li {
+        position: relative;
+        height: 48px;
+        padding-left: 8px;
+        padding-right: 8px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+
+        &:hover .menu-box {
+            display: flex;
+        }
+
+        &_selected {
+            border-bottom: 3px solid $siteColor;
+            box-sizing: border-box;
+        }
+
+        &_last:hover {
+
+            .menu-box {
+                right: 0;
+                left: auto;
+            }
+
+            .menu-box::before {
+                right: 50px;
+                left: auto;
+            }
+
+        }
+    }
+
+    .navigation-link {
+        @include font-style($size: 14px, $weight: 700);
+        text-transform: uppercase;
+        color: #222222;
+
+        &:hover {
+            color: $siteColor;
+        }
+    }
+
+    .menu-box {
+        background-color: #FFF;
+        border-radius: 5px;
+        padding: 20px;
+        position: absolute;
+        top: 43px;
+        border: #e8e8e8 solid 1px;
+        display: none;
+        gap: 32px;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            background-color: #FFF;
+            top: -9px;
+            left: $width/2;
+            right: auto;
+            transform: rotate(45deg);
+            border-top: #e8e8e8 solid 1px;
+            border-left: #e8e8e8 solid 1px;
+        }
+    }
+
+    .menu-column {}
+
+    .section-title {
+        border-bottom: #e8e8e8 solid 1px;
+        @include font-style($size: 14px, $weight: 400);
+        color: #232323;
+        text-transform: uppercase;
+        padding-bottom: 8px;
+        width: 235px;
+        margin-bottom: 16px;
+    }
+
+    .link {
+        @include font-style($size: 14px, $line-height: 28px, $weight: 400);
+        color: #646464;
+        display: block;
+
+        &:hover {
+            color: $siteColor;
+        }
+    }
+}
+
+
+@media(max-width: 768px) {
+
+    .navigation {
+        .navigation-link {
+            font-size: 10px;
+        }
+    }
+}

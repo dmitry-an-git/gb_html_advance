@@ -1,0 +1,74 @@
+@import "scss/vars";
+@import "scss/mixins";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import "scss/header";
+@import "scss/navigation";
+@import "scss/featured";
+@import "scss/banner";
+@import "scss/categories";
+@import "scss/breadcrumbs";
+@import "scss/single";
+@import "scss/likes";
+@import "scss/footer";
+@import "scss/basket";
+@import "scss/information";
+@import "scss/subscribe";
+@import "scss/video";
+@import "scss/search";
+@import "scss/checkout";
+@import "scss/customer-values";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: inherit;
+    font-size: 100%;
+    color: inherit;
+}
+
+input:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+
+    &:visited {
+        text-decoration: none;
+    }
+}
+
+.center {
+    padding-left: calc(50% - $siteWidth / 2);
+    padding-right: calc(50% - $siteWidth / 2);
+}
+
+summary::-webkit-details-marker {
+    display: none;
+    text-decoration: none;
+}
+
+// .container {
+//     padding-left: 8px;
+//     padding-right: 8px;
+// }
+
+@media(max-width: 1140px) {
+
+    .center {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+}

@@ -1,0 +1,21 @@
+// @mixin font-style($family, $size, $line-height, $weight) {
+//     font-family: $family;
+//     font-size: $size;
+//     line-height: $line-height;
+//     font-weight: $weight;
+// }
+
+// @mixin font-style($family, $size, $line-height, $weight) {
+//     font-family: $family;
+//     font-size: $size;
+//     // line-height: $line-height;
+//     font-weight: $weight;
+// }
+
+@mixin font-style($family: 'Lato', $size: 16px, $line-height: normal, $weight: normal) {
+    font-family: $family;
+    font-size: $size;
+    line-height: $line-height;
+    font-weight: $weight;
+    letter-spacing: 0.025em;
+}

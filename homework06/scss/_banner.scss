@@ -1,0 +1,32 @@
+.banner {
+    height: 665px;
+    display: flex;
+    align-items: center;
+    background-image: url(img/dude.jpg);
+    background-size: cover;
+    // background-position: center -51px;
+    background-position: center;
+
+
+    .text-box {
+        border-left: 12pt solid $siteColor;
+        padding-left: 12pt;
+        float: left;
+
+        .title {
+            @include font-style($size: 60px, $line-height: 1.2, $weight: 900);
+            color: #222;
+        }
+
+        .subtitle {
+            @include font-style($size: 40px, $line-height: 1.2, $weight: 900);
+            color: #222;
+
+            &_pink {
+                color: $siteColor;
+            }
+        }
+    }
+}
+
+@media(max-width: 1140px) {}
